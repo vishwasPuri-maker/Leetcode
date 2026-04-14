@@ -1,5 +1,6 @@
 class MinStack {
 public:
+// This was the min stack 
     stack <int> st;
     stack<int> helper;
     MinStack() {
