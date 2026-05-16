@@ -20,9 +20,9 @@ public:
     void lOrder(TreeNode* root,vector<vector<int>>& ans){
         int n=leveles(root);
         for(int i=1;i<=n;i++){
-            vector<int> v;
+            vector<int> v;  // Here we are pushing the value to the vector 
             nthLevel(root,1,i,v);
-            ans.push_back(v);
+            ans.push_back(v);   // Here we are pushing vector to the another vector which we return in answer according to question 
             cout<<endl;
         }
     }
