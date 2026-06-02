@@ -5,7 +5,7 @@ public:
         int m= waterStartTime.size();
 
         int ans= INT_MAX;
-        int minLand= INT_MAX;
+        int minLand = landStartTime[0] + landDuration[0];
 
         for(int i=0 ;i<n;i++){
             minLand= min(minLand , landStartTime[i]+landDuration[i]);
@@ -15,7 +15,7 @@ public:
             int finish= max(minLand , waterStartTime[i]) + waterDuration[i];
             ans=min(ans, finish);
         }
-         int waterLand= INT_MAX;
+        int waterLand = waterStartTime[0] + waterDuration[0];
 
         for(int i=0 ;i<m;i++){
             waterLand= min(waterLand , waterStartTime[i]+waterDuration[i]);
