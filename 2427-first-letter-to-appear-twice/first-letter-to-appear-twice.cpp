@@ -1,11 +1,13 @@
 class Solution {
 public:
     char repeatedCharacter(string s) {
-        for(int i = 0 ; i<s.size() ; i++){
-            for(int j = 0 ; j<i ; j++){
-                if(s[i] == s[j]){
-                    return s[i];
-                }
+        unordered_set<int> se;
+        for(int i=0 ; i<s.size() ; i++){
+            if(se.find(s[i]) != se.end() ){
+                return s[i];
+            }
+            else{
+                se.insert(s[i]);
             }
         }
         return ' ';
